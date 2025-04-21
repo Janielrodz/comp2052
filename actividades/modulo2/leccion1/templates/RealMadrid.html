@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Jugadores del Real Madrid{% endblock %}
+{% block content %}
+    <h2>Jugadores del Real Madrid</h2>
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Posición</th>
+            <th>Goles</th>
+            <th>Asistencias</th>
+        </tr>
+        {% for jugador in jugadores %}
+        <tr>
+            <td>{{ jugador.nombre }}</td>
+            <td>{{ jugador.posición }}</td>
+            <td>{{ jugador.goles }}</td>
+            <td>{{ jugador.asistencias }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <div class="contenido-del-index">
+        <a href="{{ url_for('index') }}">
+            <img src="{{ url_for('static', filename='images/back.png') }}" alt="back">
+        </a>
+    </div>
+    
+{% endblock %}

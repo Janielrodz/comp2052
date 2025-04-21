@@ -1,0 +1,19 @@
+### Test a /saludo
+POST http://localhost:5000/saludo
+Content-Type: application/json
+
+{
+  "nombre": "Lebron"
+}
+
+### Test a /crear_usuario
+POST http://localhost:5000/crear_usuario
+Content-Type: application/json
+
+{
+  "nombre": "Pablo",
+  "correo_electronico": "p123@lol.com"
+}
+
+### Test a /usuarios
+GET http://localhost:5000/usuarios

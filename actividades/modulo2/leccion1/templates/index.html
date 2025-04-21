@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="contenido-del-index">
+    <h2>Bienvenid@s</h2>
+    <p>En esta página podrás ver los jugadores destacados por equipo.</p>
+    
+    <a href="{{ url_for('barcelona') }}">
+        <img src="{{ url_for('static', filename='images/barcelona_logo.png') }}" alt="Barcelona">
+    </a>
+    
+    <a href="{{ url_for('RealMadrid') }}">
+        <img src="{{ url_for('static', filename='images/realmadrid_logo.png') }}" alt="Real Madrid">
+    </a>
+</div>
+{% endblock %}
